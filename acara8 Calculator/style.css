@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* border: 0.6px red solid; */
+}
+
+body {
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(214, 197, 151, 0.918);
+}
+
+.box {
+    width: 400px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box .buttons .radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #2195f300;
+}
+.box input{
+    width: 80%;
+    border-radius: 20px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.box .buttons input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.buttons {
+    padding-top: 10px;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 25%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark.plus:after {
+  content: "+";
+  position: absolute;
+  
+}
+.checkmark.minus:after {
+  content: "-";
+  position: absolute;
+  
+}
+.checkmark.kali:after {
+  content: "x";
+  position: absolute;
+  
+}
+.checkmark.bagi:after {
+  content: "/";
+  position: absolute;
+  
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkmark:after {
+  top: 35%;
+  left: 40%;
+  transform: translateX(-50%) translateY(-100%);
+  width: 8px;
+  height: 8px;
+  color: black;
+}
+
+#hasil{
+    width: 80%;
+    height: 100px;
+    resize:none;
+    border-radius: 20px;
+}
